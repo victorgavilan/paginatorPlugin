@@ -30,8 +30,16 @@
  * @see XssFilter::text()
  */ 
 
+//Get the categories array
+$catArray = array();
+
+foreach($categoryConfig as $cat) {
+  if($cat['createDelete'] && GeneralFunctions::hasPermission('editableCategories',$cat['id']))
+    $catArray[] =  GeneralFunctions::getLocalized($cat,'name') . ' ('.$cat['id'].')';
+}
+
 $pluginConfig['pp_maxPostPage'] = 5;
-$pluginConfig['pp_categoryNumber'] = 3;
+$pluginConfig['pp_categorySelection'] = $catArray;
 $pluginConfig['pp_skinSelection'] = array(0=>'simple', 1=>'border', 2=>'2 simple centered buttons', 3=>'2 simple lateral buttons', 4=>'2 bordered centered buttons', 5=>'2 bordered lateral buttons');
 $pluginConfig['pp_showDisabledButtons'] = false;
 $pluginConfig['pp_showArrows'] = false;

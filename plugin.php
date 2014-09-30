@@ -88,7 +88,8 @@
 
 
     // get the pages metadata 
-    $pp_metaData = $feindura->loadPagesMetadataByType('category', $pluginConfig['pp_categoryNumber']);
+    $pp_categorySelect = str_replace( array('(', ')'), '', strstr($pluginConfig['pp_categorySelection'], '(') ); //get the category selected ID
+    $pp_metaData = $feindura->loadPagesMetadataByType('category', $pp_categorySelect);
 
     //If there are posts (pages) in the category then insert them into the page.
     if (is_array($pp_metaData) ) $pp_numPosts = count($pp_metaData);
@@ -100,7 +101,7 @@
        if (strlen($pluginConfig['pp_MoreLinkText']) > 0) $MoreLinkText = $pluginConfig['pp_MoreLinkText'];
        
        //Generate the HTML to show the post list
-          $pp_pages = $feindura->listPages('cat', $pluginConfig['pp_categoryNumber'], array(200, $MoreLinkText));        
+          $pp_pages = $feindura->listPages('cat', $pp_categorySelect, array(200, $MoreLinkText));        
           $page = null;
           require_once dirname(__FILE__). '/post-template.php'; //import the post template function
           

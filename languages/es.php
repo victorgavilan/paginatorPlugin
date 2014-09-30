@@ -28,8 +28,8 @@ $pluginLangFile['prevButton']  = 'Anterior';
 
 $pluginLangFile['pp_maxPostPage']       = 'Número de Posts por página';
 $pluginLangFile['pp_maxPostPage_tip']   = 'Número de posts que se mostrarán en cada página.';
-$pluginLangFile['pp_categoryNumber']     = 'Categoría de los posts';
-$pluginLangFile['pp_categoryNumber_tip'] = 'Categoría a la que pertenecen las páginas que se utilizarán como posts';
+$pluginLangFile['pp_categorySelection']     = 'Categoría de los posts';
+$pluginLangFile['pp_categorySelection_tip'] = 'Categoría a la que pertenecen las páginas que se utilizarán como posts';
 $pluginLangFile['pp_skinSelection']     = 'Apariencia';
 $pluginLangFile['pp_skinSelection_tip'] = 'Selecciona la apariencia del páginador entre diferentes tipos';
 $pluginLangFile['pp_showDisabledButtons']     = 'Mostrar los botones deshabilitados';
