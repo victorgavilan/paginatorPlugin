@@ -1,0 +1,142 @@
+
+ul.paginationPlugin{
+    text-align: center;
+    font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
+    color: #4183C4;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+ul.simple.paginationPlugin{
+    font-size: 1em;
+}
+
+ul.paginationPlugin.lateral{
+  position:relative;
+  text-align: right;  
+}
+
+ul.paginationPlugin > li > a, ul.paginationPlugin > li > a:visited, ul.paginationPlugin > li > a:link{
+    display: block;    
+    text-decoration: none;
+    padding: 7px 12px;
+    color: inherit;
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+ul.paginationPlugin.border.addSpaces > li{
+    margin-left: 10px;
+}
+
+
+ul.paginationPlugin.centered > li, ul.paginationPlugin.centered.addSpaces > li{
+    margin-right: 20px;
+}
+
+ul.paginationPlugin.lateral > li, ul.paginationPlugin.lateral.addSpaces > li{
+    margin: 0px;
+}
+
+ul.paginationPlugin.centered > li.pg-nextButton{
+    margin-left: 20px;
+}
+
+ul.paginationPlugin > li{
+    -moz-user-select: none;
+    display: inline-block;
+    padding: 0px;
+    margin-left: -1px;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+ul.simple.paginationPlugin > li{
+    font-weight: normal;
+}
+
+ul.border.paginationPlugin > li{
+    border: 1px solid #E5E5E5; 
+}
+
+
+ul.border.paginationPlugin > li:hover{
+    background-color: #eee;
+}
+
+ul.simple.paginationPlugin > li > a:hover{
+    text-decoration: underline;
+}
+
+ul.border.paginationPlugin > li > a:hover{
+    text-decoration: none;
+}
+
+
+ul.paginationPlugin > li.selected{
+    font-weight: bold;
+    color: #000;
+    padding: 7px 12px;
+    cursor: default;    
+}
+
+ul.border.paginationPlugin  > li.selected{
+    background-color: #4183C4;
+    color: #fff;    
+}
+
+
+
+ul.border.paginationPlugin > li.disabled, ul.border.paginationPlugin > li.disabled:hover{
+    background-color: #eee;
+    color: #999;    
+    padding: 7px 12px;
+}
+ul.paginationPlugin > li.disabled, ul.paginationPlugin > li.disabled:hover{
+
+    font-weight: bold;
+    color: #bbb;
+    text-decoration: none;
+    cursor: default;
+    padding: 7px 12px;
+}
+
+
+ul.paginationPlugin > li.hidden{
+    visibility:hidden;
+    display: none;
+}
+
+
+ul.paginationPlugin > li.pg-prevButton {
+    margin-left: 0;
+}
+
+ul.paginationPlugin.lateral > li.pg-prevButton {
+    position: absolute;
+    left: 0px;
+}
+
+ul.simple.paginationPlugin li.pg-prevButton {
+    font-weight: bold;
+}
+
+
+ul.simple.paginationPlugin li.pg-nextButton {
+    font-weight: bold;
+}
+
+
+ul.border.paginationPlugin li.pg-prevButton {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+ul.border.paginationPlugin li.pg-nextButton {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
