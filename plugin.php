@@ -105,7 +105,13 @@
           $page = null;
           require_once dirname(__FILE__). '/post-template.php'; //import the post template function
           
-        for ($pp_x = $pp_initPost; $pp_x < $pp_initPost + $pluginConfig['pp_maxPostPage']; $pp_x++) {
+          //Last post
+          $lastPost = $pp_initPost + $pluginConfig['pp_maxPostPage'];
+          if ( $pp_initPost + $pluginConfig['pp_maxPostPage'] > sizeof( $pp_pages ) ){
+            $lastPost = sizeof( $pp_pages );
+          }
+          
+        for ($pp_x = $pp_initPost; $pp_x < $lastPost; $pp_x++) {
 
             $page = $pp_pages[$pp_x];
             postTemplate($page, $pluginConfig);
@@ -200,7 +206,7 @@
           
         }
         
-          $paginatorHTML .= '<li class="pg-nextButton '. $pp_hideClass .'">'. $pp_liContent .'</li></a>';
+          $paginatorHTML .= '<li class="pg-nextButton '. $pp_hideClass .'">'. $pp_liContent .'</li>';
         
         //End paginator
         $paginatorHTML .= '</ul>';
